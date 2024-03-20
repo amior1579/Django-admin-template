@@ -1,0 +1,63 @@
+from django.urls import path
+from .views import (
+    CollapsedMenuView,
+    ContentNavSidebarView,
+    VerticalView,
+    HorizontalView,
+    WithoutMenuView,
+    WithoutNavView,
+    FluidView,
+    ContainerView,
+    BlankView,
+)
+
+
+urlpatterns = [
+    path(
+        "layouts/collapsed_menu/",
+        CollapsedMenuView.as_view(template_name="layouts_collapsed_menu.html"),
+        name="layouts-collapsed-menu",
+    ),
+    path(
+        "layouts/content_navbar/",
+        VerticalView.as_view(template_name="layouts_content_navbar.html"),
+        name="layouts-content-navbar",
+    ),
+    path(
+        "layouts/content_nav_sidebar/",
+        ContentNavSidebarView.as_view(
+            template_name="layouts_content_navbar_with_sidebar.html"
+        ),
+        name="layouts-content-nav-sidebar",
+    ),
+    path(
+        "layouts/horizontal/",
+        HorizontalView.as_view(template_name="layouts_horizontal.html"),
+        name="layouts-horizontal",
+    ),
+    path(
+        "layouts/without_menu/",
+        WithoutMenuView.as_view(template_name="layouts_without_menu.html"),
+        name="layouts-without-menu",
+    ),
+    path(
+        "layouts/without_navbar/",
+        WithoutNavView.as_view(template_name="layouts_without_navbar.html"),
+        name="layouts-without-navbar",
+    ),
+    path(
+        "layouts/fluid/",
+        FluidView.as_view(template_name="layouts_fluid.html"),
+        name="layouts-fluid",
+    ),
+    path(
+        "layouts/container/",
+        ContainerView.as_view(template_name="layouts_container.html"),
+        name="layouts-container",
+    ),
+    path(
+        "layouts/blank/",
+        BlankView.as_view(template_name="layouts_blank.html"),
+        name="layouts-blank",
+    ),
+]
