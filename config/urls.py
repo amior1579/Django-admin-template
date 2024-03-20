@@ -89,7 +89,7 @@ urlpatterns = [
     path("", include("apps.forms.urls")),
 
     # FormLayouts urls
-    path("", include("apps.form_layouts.urls")),
+    # path("", include("apps.form_layouts.urls")),
 
     # FormWizard urls
     path("", include("apps.form_wizard.urls")),

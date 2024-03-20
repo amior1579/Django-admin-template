@@ -19,7 +19,7 @@ class TemplateLayout:
                 ),
                 # Set default rtl True if the language Arabic else use rtl_mode value from TEMPLATE_CONFIG
                 "rtl_mode": True
-                if self.request.LANGUAGE_CODE == "ar"
+                if self.request.LANGUAGE_CODE == "ar" or self.request.LANGUAGE_CODE == "fa"
                 else TemplateHelper.get_theme_config("rtl_mode"),
             }
         )

@@ -73,7 +73,7 @@ INSTALLED_APPS = [
     "apps.extended_ui",
     "apps.icons",
     "apps.forms",
-    "apps.form_layouts",
+    # "apps.form_layouts",
     "apps.form_wizard",
     "apps.form_validation",
     "apps.tables",
@@ -164,6 +164,7 @@ LANGUAGES = [
     ("de", _("German")),
     ("pt", _("Portuguese")),
     ("ar", _("Arabic")),
+    ("fa", _("Persian")),
     # Add more languages as needed
 ]
 
